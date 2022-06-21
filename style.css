@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+ body{
+    height: 100vh;
+    background-image: url(/bg1.jpg);
+    background-size: cover;
+    /* font-family: 'Montserrat', sans-serif; */
+    background-position: center;
+
+} 
+header{
+        /* height: 100vh; */
+        /* background-image: url(/images/bg1.jpg); */
+        /* background-size: cover; */
+        font-family: 'Montserrat', sans-serif;
+        /* background-position: center; */
+    
+    }
+ .nav{
+    /* background-color: rgb(38, 38, 92); */
+    position: fixed;
+    width: 100vw;
+    /* box-shadow: 0 0 10 rgb(139, 133, 133); */
+ }
+ .nav_list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;
+
+ }
+ .nav_logo{
+    list-style: none;
+    margin-right: auto;
+    cursor: pointer;
+
+ }
+ img{
+    width: 190px;
+    height:auto;
+    padding:0px
+}
+.title{
+    display: flex;
+justify-content: flex-end;
+position: relative;
+left: -54rem;
+top: 6rem;
+color: white;
+}
+.nav_listitem{
+    list-style: none;
+    font-weight: bolder;
+    position: relative;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+    top: -3rem;
+    font-size: 20px;
+}
+.nav_listitem::after{
+    content: "";
+    width: 0%;
+    border-radius: .25rem;
+    height: .3rem;
+    /* border: 1px solid orange; */
+    bottom: .8rem;
+    left: 50px;
+    position: absolute;
+    /* background-color: rgb(155, 93, 114); */
+    background-color: #FFFDD0;
+    transition: width 200ms ease-in-out;
+}
+.nav_listitem:hover::after,.nav_listitem:focus::after{
+    width: 40%;
+}
+.nav_listitem:nth-child(6):hover::after,.nav_listitem:nth-child(6):focus::after{
+    width: 64%;
+}
+.nav_listitem:hover ul,.nav_listitem:focus ul{
+    opacity: 1;
+    visibility: visible;
+}
+.nav_listitemdrop{
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    /* box-shadow: 0 0 5px rgb(182, 171, 171); */
+    /* background-color: rgb(41, 41, 119); */
+    border-radius: .2rem;
+    width: 12rem;
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+
+}
+.nav_listitemdrop li{
+    list-style: none;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    transition: ease-in-out;
+    /* background-color: rgb(41, 41, 119); */
+    
+}
+.nav_listitemdrop li:hover,.nav_listitemdrop li:focus{
+    /* background-color: rgb(155, 93, 114); */
+    background-color: #6F4E37;
+}
+.nav_listitemdrop li:active{
+    color: white;
+    background-color: #1b120b;
+}
+ a{
+    color: white;
+    text-decoration: none;
+ }
+.loginbox{
+    width: 360px;
+    height: 420px;
+    background:rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 60%);
+    box-sizing: border-box;
+
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.title2{
+    text-align: center;
+font-size: 28px;
+padding-top: 50px;
+letter-spacing: 2.5px;
+position: relative;
+left: -6px;
+}
+.subtitle{
+    text-align: center;
+    padding-top: 10px;
+}
+.field{
+    width: 100%;
+    padding: 27px 5px 5px 5px;
+}
+.field input{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: rgb(252, 252, 252);
+    padding: 20px 10px 20px 5px;
+}
+.username,
+.password{
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 30px 10px 10px rgb(66, 48, 35) , inset -30px -10px 10px rgb(105, 75, 75)
+}
+.field svg{
+    height: 22px;
+    margin: 0 10px -3px 8px;
+}
+.signin{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "lato",sans-serif;
+    color: solid black;
+    text-align: center;
+    background-color: white;
+    transition: all 0.5s;
+}
+.signin:hover{
+    background-color: #6F4E37;
+    color: white
+}
+.signin:active{
+    background-color: #b3b1b0;
+    color: black
+}
+.fog{
+    padding-top: 14px;
+position: relative;
+left: 10rem;
+font-size: 16px;
+}
+.fog a:active{
+    color: #b3b1b0;
+}
+.point{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: -46.5rem;
+    top: 6rem;
+}
+.title{
+    display: flex;
+    position: relative;
+    top: 8rem;
+}
